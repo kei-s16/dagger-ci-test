@@ -2,8 +2,9 @@ module k16em.net/dagger-ci-test
 
 go 1.19
 
+require dagger.io/dagger v0.4.0
+
 require (
-	dagger.io/dagger v0.4.0 // indirect
 	github.com/Khan/genqlient v0.5.0 // indirect
 	github.com/Microsoft/go-winio v0.5.2 // indirect
 	github.com/Sirupsen/logrus v1.0.6 // indirect
