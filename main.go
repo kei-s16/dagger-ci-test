@@ -38,22 +38,10 @@ func build(ctx context.Context) error {
         Args: []string{"ls", "/"},
     })
 
-    ls, err := golang.Stdout().Contents(ctx)
-    if err != nil {
-        return err
-    }
-    fmt.Println(ls)
-
     // `golang` コンテナでhello world!
     golang = golang.Exec(dagger.ContainerExecOpts{
         Args: []string{"echo", "'hello world!'"},
     })
-
-    echo, err := golang.Stdout().Contents(ctx)
-    if err != nil {
-        return err
-    }
-    fmt.Println(echo)
 
     return nil
 }
